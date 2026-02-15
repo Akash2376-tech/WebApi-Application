@@ -6,4 +6,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\Models\" />
+    <Folder Include="Common\Mappings\" />
+    <Folder Include="Webinars\Commands\" />
+    <Folder Include="Webinars\Queries\" />
+  </ItemGroup>
+
 </Project>
