@@ -8,8 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="14.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebApi.Application\WebApi.Application.csproj" />
+    <ProjectReference Include="..\WebApi.Infrastucture\WebApi.Infrastucture.csproj" />
   </ItemGroup>
 
 </Project>
