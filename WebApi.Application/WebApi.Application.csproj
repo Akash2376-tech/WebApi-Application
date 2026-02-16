@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -7,10 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Common\Models\" />
-    <Folder Include="Common\Mappings\" />
+    <Folder Include="Mappings\" />
     <Folder Include="Webinars\Commands\" />
-    <Folder Include="Webinars\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="MediatR" Version="14.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebApi.Domain\WebApi.Domain.csproj" />
   </ItemGroup>
 
 </Project>
