@@ -14,9 +14,7 @@ namespace WebApi.Application.Common.Models
         public int PageSize {
 
             get => _pageSize;
-            set {
-                _pageSize = value != _pageSize ? value > MaxPageSize ? MaxPageSize : value : value;
-            } 
+            set => _pageSize = value > MaxPageSize ? MaxPageSize : value;
         }
         private int _pageSize =10;
     }

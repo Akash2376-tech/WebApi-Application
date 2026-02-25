@@ -6,16 +6,14 @@ using System.Collections.Generic;
 
 namespace WebApi.Application.Webinars.Queries.Product
 {
-    public class GetPagedProductsQuery : IRequestHandler<GetPagedProductsRequest, PagedResponse<GetPagedProductsResponse>>
+    public class GetPagedProductsQueryHandler : IRequestHandler<GetPagedProductsRequest, PagedResponse<GetPagedProductsResponse>>
     {
         private readonly IProductRepository _productRepository;
         private readonly IMapper _mapper;
-        public GetPagedProductsQuery(IProductRepository productRepository, IMapper mapper)
+        public GetPagedProductsQueryHandler(IProductRepository productRepository, IMapper mapper)
         {
             _productRepository = productRepository;
             _mapper = mapper;
-
-            //_mapper = mapper;
 
         }
         public async Task<PagedResponse<GetPagedProductsResponse>> Handle(GetPagedProductsRequest request, CancellationToken cancellationToken)
