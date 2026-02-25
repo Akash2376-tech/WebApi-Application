@@ -1,5 +1,6 @@
 using WebApi.Application;
 using WebApi.Infrastucture;
+using WebApi_Application.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,10 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+//Custom Middleware
+
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 app.MapControllers();
 
