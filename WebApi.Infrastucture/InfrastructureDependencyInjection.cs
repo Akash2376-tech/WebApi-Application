@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using WebApi.Domain.Interfaces;
 using WebApi.Infrastucture.Interfaces;
 using WebApi.Infrastucture.Repositories;
+using WebApi.Infrastucture.Services;
 
 namespace WebApi.Infrastucture
 {
@@ -17,6 +18,9 @@ namespace WebApi.Infrastucture
             services.AddScoped<IProductRepository, ProductRepository>();
 
             services.AddScoped<IDbConnectionFactory, SqlConnectionFactory>();
+
+            // Added Service
+            services.AddScoped<JwtTokenService>();
 
             return services;
         }

@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Application.Common.Models;
 using WebApi.Application.Webinars.Queries.Product;
@@ -14,6 +15,8 @@ namespace WebApi_Application.Controllers
         {
             _mediator = mediator;   
         }
+
+        [Authorize(Roles = "Admin")]
         [HttpGet(Name = "GetAllPagedProducts")]
         public async Task<IActionResult> GetPagedProducts([FromQuery] PagedRequest request)
         {
