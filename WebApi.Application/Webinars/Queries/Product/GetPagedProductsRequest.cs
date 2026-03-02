@@ -8,7 +8,7 @@ using WebApi.Application.Common.Models;
 
 namespace WebApi.Application.Webinars.Queries.Product
 {
-    public class GetPagedProductsRequest : PagedRequest, IRequest<PagedResponse<GetPagedProductsResponse>>
+    public class GetPagedProductsRequest : PagedRequest, IRequest<Result<PagedResponse<GetPagedProductsResponse>>>
     {
     }
 }
